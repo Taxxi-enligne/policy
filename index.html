@@ -1,168 +1,320 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taxxi - Politique de Confidentialité</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
-    
-    <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --bg-color: #f4f7f6;
-            --text-color: #444;
-            --success-color: #27ae60;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Politique de confidentialité et suppression de compte pour l'application Taxxi.">
+  <title>Taxxi - Confidentialité et suppression de compte</title>
+  <style>
+    :root {
+      --primary: #0f8bdc;
+      --primary-dark: #0a5c92;
+      --ink: #16202a;
+      --muted: #667085;
+      --line: #d9e3ec;
+      --surface: #ffffff;
+      --background: #f4f7fb;
+      --danger: #c0392b;
+      --success: #148f5b;
+    }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .header {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--background);
+      line-height: 1.65;
+    }
 
-        .container {
-            max-width: 850px;
-            margin: -40px auto 40px;
-            background: #ffffff;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
+    header {
+      color: #ffffff;
+      background: linear-gradient(135deg, #12283a 0%, var(--primary) 100%);
+      padding: 56px 20px 76px;
+      text-align: center;
+    }
 
-        h1 { margin: 0; font-size: 2.5em; letter-spacing: -1px; }
-        h2 { 
-            color: var(--secondary-color); 
-            border-left: 4px solid var(--primary-color);
-            padding-left: 15px;
-            margin-top: 40px;
-        }
+    header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 0;
+    }
 
-        .highlight {
-            background-color: #f0f7ff;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px dashed var(--primary-color);
-            margin: 25px 0;
-        }
+    header p {
+      max-width: 760px;
+      margin: 14px auto 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.05rem;
+    }
 
-        .test-zone {
-            background-color: #f0fff4;
-            padding: 30px;
-            border-radius: 12px;
-            border: 2px solid var(--success-color);
-            text-align: center;
-            margin: 40px 0;
-        }
+    nav {
+      max-width: 980px;
+      margin: -42px auto 0;
+      padding: 0 18px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
 
-        .test-zone h2 { border: none; padding: 0; color: var(--success-color); margin-top: 0; }
-        
-        .qr-image {
-            max-width: 220px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-top: 15px;
-            border: 5px solid white;
-        }
+    nav a {
+      display: block;
+      padding: 14px 16px;
+      text-align: center;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 22px rgba(15, 35, 50, 0.08);
+    }
 
-        .date { font-size: 0.9em; opacity: 0.8; margin-top: 10px; display: block; }
+    main {
+      max-width: 980px;
+      margin: 26px auto 48px;
+      padding: 0 18px;
+    }
 
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: clamp(22px, 4vw, 36px);
+      margin-bottom: 18px;
+      box-shadow: 0 12px 30px rgba(15, 35, 50, 0.06);
+    }
 
-        .contact-box {
-            background: #f9f9f9;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
+    h2 {
+      margin: 0 0 14px;
+      color: var(--primary-dark);
+      font-size: 1.55rem;
+      letter-spacing: 0;
+    }
 
-        .email-link {
-            color: var(--primary-color);
-            font-weight: bold;
-            text-decoration: none;
-        }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.08rem;
+      color: var(--ink);
+    }
 
-        footer {
-            text-align: center;
-            padding-bottom: 40px;
-            color: #888;
-            font-size: 0.9em;
-        }
+    p {
+      margin: 0 0 12px;
+    }
 
-        @media (max-width: 600px) {
-            .container { padding: 25px; margin: -20px 15px 20px; }
-            h1 { font-size: 1.8em; }
-        }
-    </style>
+    ul,
+    ol {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .notice {
+      border-left: 4px solid var(--primary);
+      background: #eef7ff;
+      padding: 16px;
+      border-radius: 6px;
+      margin: 18px 0;
+    }
+
+    .danger {
+      border-left-color: var(--danger);
+      background: #fff4f2;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      color: #ffffff;
+      background: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button.secondary {
+      background: var(--success);
+    }
+
+    .button.danger {
+      background: var(--danger);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .qr-box {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .qr-image {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 0 18px 40px;
+      font-size: 0.92rem;
+    }
+
+    a {
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 720px) {
+      nav {
+        grid-template-columns: 1fr;
+      }
+
+      .qr-box {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Taxxi</h1>
+    <p>Politique de confidentialité, gestion des données et demande de suppression de compte.</p>
+    <p class="meta">Dernière mise à jour: 15 juillet 2026</p>
+  </header>
 
-    <div class="header">
-        <h1>Politique de Confidentialité</h1>
-        <span class="date">Dernière mise à jour : 02 mars 2026</span>
-    </div>
+  <nav aria-label="Navigation principale">
+    <a href="#privacy">Confidentialité</a>
+    <a href="#delete-account">Supprimer un compte</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <div class="container">
-        <p>Bienvenue sur <strong>Taxxi</strong>. Nous accordons une importance capitale à la protection de votre vie privée.</p>
+  <main>
+    <section id="privacy">
+      <h2>Politique de confidentialité</h2>
+      <p>
+        Taxxi met en relation les clients, les chauffeurs, les administrateurs et les proches autorisés pour les courses taxi,
+        les livraisons de paquets et le suivi familial. Cette page explique quelles données sont utilisées, pourquoi elles sont
+        nécessaires et comment demander leur suppression.
+      </p>
 
-        <div class="highlight">
-            <strong>Engagement Vie Privée :</strong> 
-            Taxxi ne revend aucune donnée. Votre localisation est utilisée uniquement pour le service de course et vos données biométriques restent locales.
-        </div>
+      <h3>1. Données collectées</h3>
+      <ul>
+        <li><strong>Compte:</strong> nom, prénom, téléphone, email, photo de profil, rôle, langue, statut du compte et préférences.</li>
+        <li><strong>Commandes taxi:</strong> départ, destination, prix, frais, total, mode de paiement, statut, chauffeur assigné, historique et raison d'annulation.</li>
+        <li><strong>Paquets:</strong> informations du colis, départ, destination, destinataire, prix, statut, validation admin et chauffeur assigné.</li>
+        <li><strong>Localisation:</strong> position nécessaire pour créer une course, suivre le chauffeur, calculer le trajet et afficher le suivi familial autorisé.</li>
+        <li><strong>Contacts:</strong> lecture uniquement si vous choisissez un numéro de destinataire pour un paquet. Taxxi ne modifie pas vos contacts.</li>
+        <li><strong>Photos et caméra:</strong> utilisées uniquement si vous choisissez d'ajouter une photo, une image ou de scanner un QR code.</li>
+        <li><strong>Notifications et diagnostic:</strong> jetons de notification, messages importants, erreurs et informations techniques nécessaires à la stabilité.</li>
+      </ul>
 
-        <h2>1. Collecte des Données</h2>
-        <ul>
-            <li><strong>Authentification :</strong> Firebase Authentication gère vos accès de manière sécurisée.</li>
-            <li><strong>Profil :</strong> Nom, téléphone et photo servent à la mise en relation chauffeur-client.</li>
-            <li><strong>Localisation :</strong> Utilisée uniquement quand l'app est ouverte sur la carte. Pas de suivi en arrière-plan.</li>
-            <li><strong>Appareil Photo :</strong> Pour scanner le QR Code des chauffeurs favoris.</li>
-        </ul>
+      <h3>2. Utilisation des données</h3>
+      <p>
+        Les données servent à créer et gérer les commandes, calculer les prix, attribuer les chauffeurs, suivre les courses,
+        gérer les paiements, envoyer des notifications, traiter les signalements, appliquer les décisions admin et afficher les historiques.
+      </p>
 
-        <div class="test-zone">
-            <h2>🛠️ Zone de Test (Google Play)</h2>
-            <p>Si vous testez l'application, vous pouvez utiliser le QR Code ci-dessous pour vérifier la fonctionnalité <strong>"Ajouter aux favoris"</strong> :</p>
-            <img src="qr.jpeg" alt="QR Code de Test Taxxi" class="qr-image">
-            <p style="font-size: 0.8em; color: #666; margin-top: 10px;">(Scannez cette image depuis l'application Client)</p>
-        </div>
+      <h3>3. Partage des données</h3>
+      <p>
+        Les informations nécessaires à une commande sont visibles par le client, le chauffeur assigné et les administrateurs Taxxi.
+        Un proche autorisé peut voir uniquement la course taxi active que vous lui permettez de suivre. Taxxi ne vend pas vos données.
+      </p>
+      <p>
+        L'application utilise des services techniques comme Firebase, Firestore, Firebase Authentication, Cloud Functions,
+        Firebase Cloud Messaging et Google Maps pour fonctionner.
+      </p>
 
-        <h2>2. Sécurité & Suppression</h2>
-        <p>Vos données biométriques ne quittent jamais votre appareil. Vous pouvez demander la suppression de votre compte et de toutes vos données associées à tout moment via l'application ou par email.</p>
-        <h2>3. Sécurité et Lutte contre les Abus</h2>
-        <p>Pour garantir la sécurité de nos services et de nos chauffeurs, toute tentative d'accès non autorisé, d'utilisation de scripts automatisés (spams), ou d'interférence avec l'intégrité de l'application Taxxi est strictement interdite.
-            Nous nous réservons le droit de suspendre ou de supprimer définitivement, sans préavis ni justification, tout compte utilisateur qui :</p>
-        <ol>
-            <li>Tente de pirater, de décompiler ou d'extraire le code source de l'application.</li>
-            <li>Utilise des robots ou des faux comptes pour saturer le service de fausses réservations (Spam).</li>
-            <li>Harcèle ou utilise un langage abusif envers les chauffeurs ou l'assistance technique.</li>
-            <li>Utilise des outils de manipulation de position GPS (Fake GPS) pour fausser le service.</li>
-        </ol>
-        <p><strong>Taxxi collabore activement avec les autorités compétentes en cas de cyberattaque ou de fraude avérée.</strong></p>
-        <div class="contact-box">
-            <h2>Contact & Support</h2>
-            <p>Pour toute question :</p>
-            <a href="mailto:hamzaha.dt@gmail.com" class="email-link">hamzaha.dt@gmail.com</a>
-        </div>
-    </div>
+      <h3>4. Conservation</h3>
+      <p>
+        Les données de compte sont conservées tant que le compte existe. Certaines commandes, historiques, rapports ou données comptables
+        peuvent être conservés ou anonymisés si nécessaire pour la sécurité, la fraude, le support ou les obligations légales.
+      </p>
 
-    <footer>
-        &copy; 2026 Taxxi App. Tous droits réservés.
-    </footer>
+      <h3>5. Sécurité et abus</h3>
+      <p>
+        Toute tentative de piratage, faux compte, spam, manipulation GPS, harcèlement ou usage frauduleux peut entraîner une suspension,
+        une pénalité ou une suppression du compte. Taxxi peut coopérer avec les autorités compétentes en cas de fraude ou cyberattaque.
+      </p>
+    </section>
 
+    <section id="delete-account">
+      <h2>Demander la suppression de votre compte</h2>
+      <p>
+        Vous pouvez supprimer votre compte directement dans l'application Taxxi:
+        <strong>Profil > Paramètre > Supprimer mon compte</strong>.
+      </p>
+      <p>
+        Si vous n'avez plus accès à l'application, vous pouvez demander la suppression depuis cette page par email ou WhatsApp.
+        Indiquez le numéro de téléphone ou l'email utilisé dans Taxxi afin que nous puissions identifier le compte.
+      </p>
+
+      <div class="notice danger">
+        <strong>Important:</strong> la suppression est définitive. Votre profil, vos favoris, notifications, historiques personnels,
+        demandes de paquets, autorisations famille, jetons de notification et position enregistrée sont supprimés lorsque possible.
+        Les commandes nécessaires à la sécurité, à la fraude ou à la comptabilité peuvent être anonymisées au lieu d'être supprimées.
+      </div>
+
+      <h3>Informations à envoyer</h3>
+      <ul>
+        <li>Votre nom dans l'application.</li>
+        <li>Le numéro de téléphone ou l'email du compte Taxxi.</li>
+        <li>La demande claire: "Je veux supprimer mon compte Taxxi".</li>
+      </ul>
+
+      <p class="meta">Délai de traitement habituel: jusqu'à 30 jours après vérification du compte.</p>
+
+      <div class="actions">
+        <a class="button danger" href="mailto:hamzaha.dt@gmail.com?subject=Suppression%20de%20compte%20Taxxi&body=Bonjour%2C%0A%0AJe%20veux%20supprimer%20mon%20compte%20Taxxi.%0A%0ANom%20dans%20l'application%20:%20%0AT%C3%A9l%C3%A9phone%20ou%20email%20du%20compte%20:%20%0A%0AMerci.">Demander par email</a>
+        <a class="button secondary" href="https://wa.me/25377033344?text=Bonjour%2C%20je%20veux%20supprimer%20mon%20compte%20Taxxi." rel="noopener">Demander par WhatsApp</a>
+        <a class="button" href="delete-account.html">Page dédiée</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>QR de test Taxxi</h2>
+      <div class="qr-box">
+        <img src="qr.jpeg" alt="QR code de test Taxxi" class="qr-image">
+        <p>
+          Ce QR code peut être utilisé pour tester la fonctionnalité de scan dans l'application Taxxi.
+          Il n'est pas nécessaire pour demander la suppression d'un compte.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Pour toute question concernant la confidentialité, la suppression de compte ou le support Taxxi:</p>
+      <ul>
+        <li>Email: <a href="mailto:hamzaha.dt@gmail.com">hamzaha.dt@gmail.com</a></li>
+        <li>WhatsApp: <a href="https://wa.me/25377033344" rel="noopener">+253 77 03 33 44</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Taxxi. Tous droits réservés.
+  </footer>
 </body>
 </html>
-

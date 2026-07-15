@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demander la suppression de votre compte Taxxi.">
+  <title>Taxxi - Supprimer mon compte</title>
+  <style>
+    :root {
+      --primary: #0f8bdc;
+      --danger: #c0392b;
+      --success: #148f5b;
+      --ink: #16202a;
+      --muted: #667085;
+      --line: #d9e3ec;
+      --surface: #ffffff;
+      --background: #f4f7fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--background);
+    }
+
+    header {
+      background: linear-gradient(135deg, #12283a 0%, var(--primary) 100%);
+      color: #ffffff;
+      padding: 54px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 0;
+    }
+
+    header p {
+      max-width: 720px;
+      margin: 12px auto 0;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    main {
+      max-width: 860px;
+      margin: 28px auto 46px;
+      padding: 0 18px;
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: clamp(22px, 4vw, 36px);
+      box-shadow: 0 12px 30px rgba(15, 35, 50, 0.06);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--danger);
+      font-size: 1.55rem;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.08rem;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul,
+    ol {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .notice {
+      border-left: 4px solid var(--danger);
+      background: #fff4f2;
+      padding: 16px;
+      border-radius: 6px;
+      margin: 18px 0;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      color: #ffffff;
+      background: var(--danger);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button.secondary {
+      background: var(--success);
+    }
+
+    .button.neutral {
+      color: var(--ink);
+      background: #eef2f6;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 0 18px 40px;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Supprimer mon compte Taxxi</h1>
+    <p>Cette page permet de demander la suppression d'un compte Taxxi sans réinstaller l'application.</p>
+    <p class="meta">Dernière mise à jour: 15 juillet 2026</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Demande de suppression</h2>
+      <p>
+        Si vous avez encore accès à l'application, utilisez le chemin suivant:
+        <strong>Profil > Paramètre > Supprimer mon compte</strong>.
+      </p>
+      <p>
+        Si vous n'avez plus accès à l'application, envoyez une demande par email ou WhatsApp avec les informations du compte.
+      </p>
+
+      <div class="notice">
+        <strong>Suppression définitive:</strong> après vérification, Taxxi supprime lorsque possible votre profil, favoris,
+        notifications, historiques personnels, demandes de paquets, autorisations famille, jetons de notification et position enregistrée.
+        Certaines commandes peuvent être anonymisées si elles doivent rester pour la sécurité, la fraude, le support ou la comptabilité.
+      </div>
+
+      <h3>À inclure dans votre demande</h3>
+      <ol>
+        <li>Votre nom dans l'application Taxxi.</li>
+        <li>Le numéro de téléphone ou l'email utilisé pour le compte.</li>
+        <li>La phrase: "Je veux supprimer mon compte Taxxi".</li>
+      </ol>
+
+      <p class="meta">Délai de traitement habituel: jusqu'à 30 jours après vérification du compte.</p>
+
+      <div class="actions">
+        <a class="button" href="mailto:hamzaha.dt@gmail.com?subject=Suppression%20de%20compte%20Taxxi&body=Bonjour%2C%0A%0AJe%20veux%20supprimer%20mon%20compte%20Taxxi.%0A%0ANom%20dans%20l'application%20:%20%0AT%C3%A9l%C3%A9phone%20ou%20email%20du%20compte%20:%20%0A%0AMerci.">Demander par email</a>
+        <a class="button secondary" href="https://wa.me/25377033344?text=Bonjour%2C%20je%20veux%20supprimer%20mon%20compte%20Taxxi." rel="noopener">Demander par WhatsApp</a>
+        <a class="button neutral" href="index.html">Voir la confidentialité</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Taxxi. Contact: hamzaha.dt@gmail.com
+  </footer>
+</body>
+</html>

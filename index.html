@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Politique de confidentialité et suppression de compte pour l'application Taxxi.">
-  <title>Taxxi - Confidentialité et suppression de compte</title>
+  <meta name="description" content="Politique de confidentialité et suppression de compte pour l'application Geya.">
+  <title>Geya - Confidentialité et suppression de compte</title>
   <style>
     :root {
       --primary: #0f8bdc;
@@ -199,13 +199,14 @@
 </head>
 <body>
   <header>
-    <h1>Taxxi</h1>
+    <h1>Geya</h1>
     <p>Politique de confidentialité, gestion des données et demande de suppression de compte.</p>
-    <p class="meta">Dernière mise à jour: 15 juillet 2026</p>
+    <p class="meta">Dernière mise à jour: 24 août 2026</p>
   </header>
 
   <nav aria-label="Navigation principale">
     <a href="#privacy">Confidentialité</a>
+    <a href="#driver">Chauffeurs</a>
     <a href="#delete-account">Supprimer un compte</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -214,7 +215,7 @@
     <section id="privacy">
       <h2>Politique de confidentialité</h2>
       <p>
-        Taxxi met en relation les clients, les chauffeurs, les administrateurs et les proches autorisés pour les courses taxi,
+        Geya met en relation les clients, les chauffeurs, les administrateurs et les proches autorisés pour les courses taxi,
         les livraisons de paquets et le suivi familial. Cette page explique quelles données sont utilisées, pourquoi elles sont
         nécessaires et comment demander leur suppression.
       </p>
@@ -225,7 +226,7 @@
         <li><strong>Commandes taxi:</strong> départ, destination, prix, frais, total, mode de paiement, statut, chauffeur assigné, historique et raison d'annulation.</li>
         <li><strong>Paquets:</strong> informations du colis, départ, destination, destinataire, prix, statut, validation admin et chauffeur assigné.</li>
         <li><strong>Localisation:</strong> position nécessaire pour créer une course, suivre le chauffeur, calculer le trajet et afficher le suivi familial autorisé.</li>
-        <li><strong>Contacts:</strong> lecture uniquement si vous choisissez un numéro de destinataire pour un paquet. Taxxi ne modifie pas vos contacts.</li>
+        <li><strong>Contacts:</strong> lecture uniquement si vous choisissez un numéro de destinataire pour un paquet. Geya ne modifie pas vos contacts.</li>
         <li><strong>Photos et caméra:</strong> utilisées uniquement si vous choisissez d'ajouter une photo, une image ou de scanner un QR code.</li>
         <li><strong>Notifications et diagnostic:</strong> jetons de notification, messages importants, erreurs et informations techniques nécessaires à la stabilité.</li>
       </ul>
@@ -238,8 +239,8 @@
 
       <h3>3. Partage des données</h3>
       <p>
-        Les informations nécessaires à une commande sont visibles par le client, le chauffeur assigné et les administrateurs Taxxi.
-        Un proche autorisé peut voir uniquement la course taxi active que vous lui permettez de suivre. Taxxi ne vend pas vos données.
+        Les informations nécessaires à une commande sont visibles par le client, le chauffeur assigné et les administrateurs Geya.
+        Un proche autorisé peut voir uniquement la course taxi active que vous lui permettez de suivre. Geya ne vend pas vos données.
       </p>
       <p>
         L'application utilise des services techniques comme Firebase, Firestore, Firebase Authentication, Cloud Functions,
@@ -255,19 +256,42 @@
       <h3>5. Sécurité et abus</h3>
       <p>
         Toute tentative de piratage, faux compte, spam, manipulation GPS, harcèlement ou usage frauduleux peut entraîner une suspension,
-        une pénalité ou une suppression du compte. Taxxi peut coopérer avec les autorités compétentes en cas de fraude ou cyberattaque.
+        une pénalité ou une suppression du compte. Geya peut coopérer avec les autorités compétentes en cas de fraude ou cyberattaque.
+      </p>
+      <h3 id="driver">6. Application Geya Driver (chauffeurs et livreurs)</h3>
+      <p>
+        L'application Geya Driver est réservée aux chauffeurs et livreurs partenaires. Elle collecte, en plus des données
+        ci-dessus, les éléments nécessaires à l'exercice de l'activité&nbsp;:
+      </p>
+      <ul>
+        <li><strong>Documents professionnels&nbsp;:</strong> permis de conduire, carte grise, assurance et photo du véhicule, transmis lors de l'inscription et consultés uniquement par les administrateurs Geya pour valider le compte.</li>
+        <li><strong>Vehicule&nbsp;:</strong> modèle, plaque et type de véhicule, affichés au client qui vous attend.</li>
+        <li><strong>Position pendant le service&nbsp;:</strong> votre position GPS est utilisée pour vous proposer les courses proches, afficher votre approche au client et mesurer la distance parcourue qui sert au calcul du tarif.</li>
+        <li><strong>Gains et commissions&nbsp;:</strong> montant des courses réalisées, commissions dues et règlements effectués.</li>
+      </ul>
+      <p>
+        <strong>Position lorsque l'application n'est pas à l'écran&nbsp;:</strong> pendant une course ou une livraison acceptee,
+        la mesure de distance continue lorsque vous basculez sur votre application de navigation. Android affiche alors une
+        notification permanente indiquant que Geya mesure la distance parcourue. Cette mesure démarre à l'acceptation d'une
+        course et s'arrête dès qu'elle est terminée ou annulée&nbsp;: aucune position n'est enregistrée lorsque vous êtes hors
+        ligne ou sans course en cours. Geya ne suit jamais votre position en dehors des courses.
+      </p>
+      <p>
+        Un chauffeur peut supprimer son compte depuis l'application&nbsp;: <strong>Profil &gt; Supprimer mon compte</strong>.
+        La suppression n'annule pas les commissions restant dues et n'est pas possible tant qu'une course est en cours.
       </p>
     </section>
 
     <section id="delete-account">
       <h2>Demander la suppression de votre compte</h2>
       <p>
-        Vous pouvez supprimer votre compte directement dans l'application Taxxi:
-        <strong>Profil > Paramètre > Supprimer mon compte</strong>.
+        Vous pouvez supprimer votre compte directement dans l'application&nbsp;:
+        client Geya <strong>Profil &gt; Paramètre &gt; Supprimer mon compte</strong>,
+        chauffeur Geya Driver <strong>Profil &gt; Supprimer mon compte</strong>.
       </p>
       <p>
         Si vous n'avez plus accès à l'application, vous pouvez demander la suppression depuis cette page par email ou WhatsApp.
-        Indiquez le numéro de téléphone ou l'email utilisé dans Taxxi afin que nous puissions identifier le compte.
+        Indiquez le numéro de téléphone ou l'email utilisé dans Geya afin que nous puissions identifier le compte.
       </p>
 
       <div class="notice danger">
@@ -279,25 +303,25 @@
       <h3>Informations à envoyer</h3>
       <ul>
         <li>Votre nom dans l'application.</li>
-        <li>Le numéro de téléphone ou l'email du compte Taxxi.</li>
-        <li>La demande claire: "Je veux supprimer mon compte Taxxi".</li>
+        <li>Le numéro de téléphone ou l'email du compte Geya.</li>
+        <li>La demande claire: "Je veux supprimer mon compte Geya".</li>
       </ul>
 
       <p class="meta">Délai de traitement habituel: jusqu'à 30 jours après vérification du compte.</p>
 
       <div class="actions">
-        <a class="button danger" href="mailto:hamzaha.dt@gmail.com?subject=Suppression%20de%20compte%20Taxxi&body=Bonjour%2C%0A%0AJe%20veux%20supprimer%20mon%20compte%20Taxxi.%0A%0ANom%20dans%20l'application%20:%20%0AT%C3%A9l%C3%A9phone%20ou%20email%20du%20compte%20:%20%0A%0AMerci.">Demander par email</a>
-        <a class="button secondary" href="https://wa.me/25377033344?text=Bonjour%2C%20je%20veux%20supprimer%20mon%20compte%20Taxxi." rel="noopener">Demander par WhatsApp</a>
+        <a class="button danger" href="mailto:hamzaha.dt@gmail.com?subject=Suppression%20de%20compte%20Geya&body=Bonjour%2C%0A%0AJe%20veux%20supprimer%20mon%20compte%20Geya.%0A%0ANom%20dans%20l'application%20:%20%0AT%C3%A9l%C3%A9phone%20ou%20email%20du%20compte%20:%20%0A%0AMerci.">Demander par email</a>
+        <a class="button secondary" href="https://wa.me/25377033344?text=Bonjour%2C%20je%20veux%20supprimer%20mon%20compte%20Geya." rel="noopener">Demander par WhatsApp</a>
         <a class="button" href="delete-account.html">Page dédiée</a>
       </div>
     </section>
 
     <section>
-      <h2>QR de test Taxxi</h2>
+      <h2>QR de test Geya</h2>
       <div class="qr-box">
-        <img src="qr.jpeg" alt="QR code de test Taxxi" class="qr-image">
+        <img src="qr.jpeg" alt="QR code de test Geya" class="qr-image">
         <p>
-          Ce QR code peut être utilisé pour tester la fonctionnalité de scan dans l'application Taxxi.
+          Ce QR code peut être utilisé pour tester la fonctionnalité de scan dans l'application Geya.
           Il n'est pas nécessaire pour demander la suppression d'un compte.
         </p>
       </div>
@@ -305,7 +329,7 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Pour toute question concernant la confidentialité, la suppression de compte ou le support Taxxi:</p>
+      <p>Pour toute question concernant la confidentialité, la suppression de compte ou le support Geya:</p>
       <ul>
         <li>Email: <a href="mailto:hamzaha.dt@gmail.com">hamzaha.dt@gmail.com</a></li>
         <li>WhatsApp: <a href="https://wa.me/25377033344" rel="noopener">+253 77 03 33 44</a></li>
@@ -314,7 +338,7 @@
   </main>
 
   <footer>
-    © 2026 Taxxi. Tous droits réservés.
+    © 2026 Geya. Tous droits réservés.
   </footer>
 </body>
 </html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Politique Geya sur les produits reglementes : tabac, nicotine, alcool et medicaments sont interdits sur la plateforme.">
+  <title>Geya - Produits réglementés</title>
+  <style>
+    :root {
+      --primary: #0f8bdc;
+      --danger: #c0392b;
+      --success: #148f5b;
+      --ink: #16202a;
+      --muted: #667085;
+      --line: #d9e3ec;
+      --surface: #ffffff;
+      --background: #f4f7fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--background);
+    }
+
+    header {
+      background: linear-gradient(135deg, #12283a 0%, var(--primary) 100%);
+      color: #ffffff;
+      padding: 54px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 0;
+    }
+
+    header p {
+      max-width: 720px;
+      margin: 12px auto 0;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    main {
+      max-width: 860px;
+      margin: 28px auto 46px;
+      padding: 0 18px;
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: clamp(22px, 4vw, 36px);
+      box-shadow: 0 12px 30px rgba(15, 35, 50, 0.06);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--danger);
+      font-size: 1.55rem;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.08rem;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul,
+    ol {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .notice {
+      border-left: 4px solid var(--danger);
+      background: #fff4f2;
+      padding: 16px;
+      border-radius: 6px;
+      margin: 18px 0;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      color: #ffffff;
+      background: var(--danger);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button.secondary {
+      background: var(--success);
+    }
+
+    .button.neutral {
+      color: var(--ink);
+      background: #eef2f6;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 0 18px 40px;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Produits réglementés</h1>
+    <p>Geya ne vend et ne livre aucun produit soumis à une restriction d'âge. Cette page explique la règle et ce qu'elle implique pour les commerçants partenaires.</p>
+    <p class="meta">Dernière mise à jour : 26 août 2026</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>La règle</h2>
+      <p>
+        Le tabac, les cigarettes électroniques, les e-liquides, tout produit contenant de la nicotine, ainsi que l'alcool
+        et les médicaments, <strong>ne peuvent pas être proposés sur Geya</strong>. Ni commandés, ni livrés, ni présentés
+        au catalogue.
+      </p>
+      <div class="notice">
+        <strong>Geya n'exploite aucun dispositif de vérification d'âge</strong>, parce qu'aucun produit vendu sur la
+        plateforme n'en requiert. Une version antérieure de cette page décrivait un contrôle d'identité à la remise&nbsp;:
+        ce dispositif a été retiré des applications, et la vente de produits soumis à restriction d'âge a été abandonnée.
+      </div>
+    </section>
+
+    <section>
+      <h2>Comment la règle est appliquée</h2>
+      <p>
+        L'interdiction ne repose pas sur la bonne volonté des commerçants. Elle est appliquée à trois niveaux&nbsp;:
+      </p>
+      <ul>
+        <li><strong>À la source.</strong> L'application destinée aux restaurants ne propose aucune catégorie de produit réglementé. Un partenaire ne peut pas déclarer en vendre.</li>
+        <li><strong>Au catalogue.</strong> Les requêtes qui alimentent l'application client excluent tout article marqué comme restreint. Un article qui apparaîtrait en base ne serait jamais affiché ni commandable.</li>
+        <li><strong>Au serveur.</strong> Le mécanisme qui autorisait ces ventes est désactivé côté serveur, indépendamment de la version de l'application installée.</li>
+      </ul>
+      <p>
+        Ce triple verrouillage vise le même objectif que l'ancien contrôle d'identité, en plus simple et en plus sûr&nbsp;:
+        un produit qui n'existe pas sur la plateforme ne peut pas être vendu à un mineur.
+      </p>
+    </section>
+
+    <section>
+      <h2>Ce que cela signifie pour un commerçant partenaire</h2>
+      <p>
+        Un restaurant qui rejoint Geya Food s'engage à ne mettre en vente aucun produit interdit aux mineurs. Tenter de
+        contourner la règle — en déguisant un article sous un autre nom, une autre catégorie ou une autre photo —
+        entraîne la fermeture de l'espace du restaurant.
+      </p>
+      <p>
+        Geya reste une place de marché et un service de livraison&nbsp;: les commerçants sont les vendeurs, ils fixent
+        leurs prix et encaissent le prix des produits. Cette distinction ne change rien à la règle ci-dessus, qui
+        s'applique à tout ce qui transite par la plateforme.
+      </p>
+    </section>
+
+    <section>
+      <h2>Signaler un manquement</h2>
+      <p>
+        Si vous constatez qu'un produit interdit est proposé sur Geya, signalez-le. Indiquez le nom du restaurant et
+        celui de l'article&nbsp;; le contrôle est immédiat.
+      </p>
+      <div class="actions">
+        <a class="button" href="mailto:hamzaha.dt@gmail.com?subject=Signalement%20produit%20interdit%20sur%20Geya">Signaler par email</a>
+        <a class="button secondary" href="index.html">Politique de confidentialité</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Geya. Contact: hamzaha.dt@gmail.com
+  </footer>
+</body>
+</html>

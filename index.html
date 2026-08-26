@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Politique de confidentialité et suppression de compte pour l'application Geya.">
   <title>Geya - Confidentialité et suppression de compte</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="logo-mini.png">
   <style>
     :root {
       --primary: #0f8bdc;
@@ -28,6 +30,30 @@
       color: var(--ink);
       background: var(--background);
       line-height: 1.65;
+    }
+
+    /* Le logo est fourni en noir sur fond blanc opaque, sans couche alpha : il
+       ne peut pas être posé tel quel sur le dégradé, d'où la pastille blanche.
+       Le fichier est carré avec de larges marges autour du mot ; un fond
+       agrandi et centré recadre sur les deux axes, ce que `object-fit: cover`
+       ne sait pas faire sur une source carrée. Le libellé accessible est porté
+       par l'attribut aria-label du lien. */
+    .brand {
+      display: inline-block;
+      width: 168px;
+      height: 80px;
+      background: #ffffff url("logo-mini.png") center / 330px no-repeat;
+      border-radius: 14px;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .18);
+    }
+
+    @media (max-width: 480px) {
+      .brand {
+        width: 138px;
+        height: 66px;
+        background-size: 271px;
+      }
     }
 
     header {
@@ -199,6 +225,7 @@
 </head>
 <body>
   <header>
+    <a class="brand" href="index.html" role="img" aria-label="Geya"></a>
     <h1>Geya</h1>
     <p>Politique de confidentialité, gestion des données et demande de suppression de compte.</p>
     <p class="meta">Dernière mise à jour: 26 août 2026</p>
@@ -208,6 +235,7 @@
     <a href="#privacy">Confidentialité</a>
     <a href="#driver">Chauffeurs</a>
     <a href="#restaurant">Restaurants</a>
+    <a href="produits-reglementes.html">Produits réglementés</a>
     <a href="#delete-account">Supprimer un compte</a>
     <a href="#contact">Contact</a>
   </nav>

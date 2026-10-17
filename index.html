@@ -24,7 +24,10 @@
       box-sizing: border-box;
     }
 
+    header .meta { color: #ffffff; }
+
     body {
+      overflow-wrap: anywhere;
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
@@ -227,7 +230,7 @@
   <header>
     <a class="brand" href="index.html" role="img" aria-label="Geya"></a>
     <p>Politique de confidentialité, gestion des données et demande de suppression de compte.</p>
-    <p class="meta">Dernière mise à jour: 26 août 2026</p>
+    <p class="meta">Dernière mise à jour : 17 octobre 2026</p>
   </header>
 
   <nav aria-label="Navigation principale">
@@ -243,17 +246,21 @@
     <section id="privacy">
       <h2>Politique de confidentialité</h2>
       <p>
-        Geya met en relation les clients, les chauffeurs, les administrateurs et les proches autorisés pour les courses taxi,
-        les livraisons de paquets et le suivi familial. Cette page explique quelles données sont utilisées, pourquoi elles sont
-        nécessaires et comment demander leur suppression.
+        Geya met en relation les clients, les chauffeurs, les commerces partenaires, les administrateurs et les proches autorisés
+        pour les courses taxi, les livraisons de paquets, les commandes de repas (Food), les achats en Boutique et le suivi familial.
+        Cette politique décrit les données utilisées par ces services et les moyens de demander leur correction ou leur suppression.
+        La version client destinée à cette publication ne propose pas de financement bancaire.
       </p>
 
       <h3>1. Données collectées</h3>
       <ul>
-        <li><strong>Compte:</strong> nom, prénom, téléphone, email, photo de profil, rôle, langue, statut du compte et préférences.</li>
+        <li><strong>Compte :</strong> nom, prénom, téléphone, e-mail, sexe, date de naissance, photo de profil, rôle, langue, statut et préférences. Le sexe et la date de naissance sont demandés à l'inscription. L'authentification utilise Firebase Authentication, y compris la connexion Google lorsqu'elle est choisie.</li>
         <li><strong>Commandes taxi:</strong> départ, destination, prix, frais, total, mode de paiement, statut, chauffeur assigné, historique et raison d'annulation.</li>
         <li><strong>Paquets:</strong> informations du colis, départ, destination, destinataire, prix, statut, validation admin et chauffeur assigné.</li>
-        <li><strong>Localisation:</strong> position nécessaire pour créer une course, suivre le chauffeur, calculer le trajet et afficher le suivi familial autorisé.</li>
+        <li><strong>Commandes Food et Boutique :</strong> commerces choisis, produits, quantités, options, instructions, prix, frais, adresse et coordonnées de livraison, mode et état du paiement, étapes de commande et historique des achats.</li>
+        <li><strong>Avis et contributions :</strong> notes, commentaires et photos que vous choisissez de publier, ainsi que les réponses des partenaires. Les avis publiés sont visibles des autres utilisateurs avec les informations de profil affichées dans l'application.</li>
+        <li><strong>Recherches dans les catalogues :</strong> termes recherchés, date, parcours, résultats, sexe renseigné dans le profil et, pour le catalogue géographique, pays, région et boutique ciblée. Un identifiant pseudonymisé permet de compter les clients distincts sans afficher leur nom, téléphone ou adresse e-mail dans les statistiques.</li>
+        <li><strong>Localisation:</strong> position utilisée pour choisir un départ ou une adresse de livraison, calculer un trajet, trouver les commerces disponibles dans la zone, suivre une course ou livraison et permettre le suivi familial autorisé.</li>
         <li><strong>Contacts:</strong> lecture uniquement si vous choisissez un numéro de destinataire pour un paquet. Geya ne modifie pas vos contacts.</li>
         <li><strong>Photos et caméra:</strong> utilisées uniquement si vous choisissez d'ajouter une photo, une image ou de scanner un QR code.</li>
         <li><strong>Notifications et diagnostic:</strong> jetons de notification, messages importants, erreurs et informations techniques nécessaires à la stabilité.</li>
@@ -261,26 +268,49 @@
 
       <h3>2. Utilisation des données</h3>
       <p>
-        Les données servent à créer et gérer les commandes, calculer les prix, attribuer les chauffeurs, suivre les courses,
-        gérer les paiements, envoyer des notifications, traiter les signalements, appliquer les décisions admin et afficher les historiques.
+        Les données servent à créer et gérer le compte, les courses et les commandes, calculer les prix, organiser les livraisons,
+        gérer les paiements et les historiques, envoyer les notifications, publier les avis choisis par l'utilisateur et traiter les signalements.
+        Les statistiques de recherche servent à comprendre la demande et améliorer les catalogues. Elles sont consultables uniquement
+        par les administrateurs autorisés. Les recherches contenant une adresse e-mail ou un numéro de téléphone identifiable sont écartées du suivi statistique.
       </p>
 
       <h3>3. Partage des données</h3>
       <p>
-        Les informations nécessaires à une commande sont visibles par le client, le chauffeur assigné et les administrateurs Geya.
-        Un proche autorisé peut voir uniquement la course taxi active que vous lui permettez de suivre. Geya ne vend pas vos données.
+        Les informations nécessaires à une course ou livraison sont accessibles au client, au chauffeur ou livreur assigné
+        et aux administrateurs autorisés. Pour Food et Boutique, le restaurant ou la boutique reçoit les informations utiles à
+        la préparation et au traitement de sa commande ; le livreur reçoit celles nécessaires à la remise.
+        Les partenaires n'ont pas accès à l'ensemble de votre profil ou de vos historiques.
+        Un proche autorisé peut consulter la course taxi active que vous lui permettez de suivre ; cette autorisation peut être retirée.
+        Geya ne vend pas vos données personnelles.
       </p>
       <p>
         L'application utilise des services techniques comme Firebase, Firestore, Firebase Authentication, Cloud Functions,
-        Firebase Cloud Messaging et Google Maps pour fonctionner.
+        Firebase Cloud Messaging, Firebase Performance et Google Maps pour fonctionner. Les identifiants d'installation et jetons servent notamment aux notifications, à la sécurité et au diagnostic. Les opérateurs de paiement reçoivent les informations nécessaires lorsque leur service est utilisé, selon leurs propres règles de confidentialité. L'application peut afficher des publicités pour des partenaires.
       </p>
 
       <h3>4. Conservation</h3>
       <p>
-        Les données de compte sont conservées tant que le compte existe. Certaines commandes, historiques, rapports ou données comptables
-        peuvent être conservés ou anonymisés si nécessaire pour la sécurité, la fraude, le support ou les obligations légales.
+        Les données de compte sont conservées tant que le compte existe. Les recherches pseudonymisées sont conservées pendant
+        365 jours, puis supprimées par une purge automatique. Elles restent des données pseudonymisées, et non des données anonymes.
+        Les commandes et justificatifs nécessaires au suivi d'une transaction, à la prévention de la fraude, au règlement d'un litige
+        ou à une obligation comptable peuvent être conservés pendant la durée nécessaire à cette finalité.
+        Les données qui ne sont plus nécessaires doivent être supprimées ou anonymisées ; une simple désactivation du compte ne constitue pas une suppression.
+        Vous pouvez contacter le support pour demander la suppression des données de recherche ou connaître les données conservées et le motif de conservation.
       </p>
 
+      <h3>Vos choix et vos droits</h3>
+      <p>
+        Vous pouvez corriger les informations de votre profil, retirer une autorisation de suivi familial et gérer les permissions
+        de localisation, de notifications, de caméra, de photos et de contacts dans les réglages de votre appareil.
+        Un refus peut rendre indisponible la fonction qui dépend de cette permission. L'accès aux photos et aux contacts est utilisé
+        lorsque vous choisissez une action qui le nécessite.
+      </p>
+      <p>
+        Pour demander l'accès, la rectification ou la suppression de données, contactez le support indiqué ci-dessous.
+        Précisez uniquement l'e-mail ou le téléphone du compte et la demande ; ne transmettez jamais votre mot de passe,
+        un code de connexion ou les coordonnées complètes d'une carte bancaire.
+        Des justificatifs limités à ce qui est nécessaire peuvent être demandés pour vérifier que le compte vous appartient.
+      </p>
       <h3>5. Sécurité et abus</h3>
       <p>
         Toute tentative de piratage, faux compte, spam, manipulation GPS, harcèlement ou usage frauduleux peut entraîner une suspension,
@@ -352,9 +382,12 @@
       </p>
 
       <div class="notice danger">
-        <strong>Important:</strong> la suppression est définitive. Votre profil, vos favoris, notifications, historiques personnels,
-        demandes de paquets, autorisations famille, jetons de notification et position enregistrée sont supprimés lorsque possible.
-        Les commandes nécessaires à la sécurité, à la fraude ou à la comptabilité peuvent être anonymisées au lieu d'être supprimées.
+        <strong>Important :</strong> supprimer le compte met fin à son accès. Le traitement porte sur les données de profil,
+        les favoris, notifications, historiques personnels, paniers, demandes de paquets, autorisations familiales et jetons de notification.
+        Il couvre aussi les données associées aux commandes Food et Boutique, aux recherches et aux avis ; leur effacement peut nécessiter
+        un traitement complémentaire par le support. Certaines données de transaction peuvent être conservées pour une obligation comptable,
+        la prévention de la fraude ou un litige, avec un accès limité ; les données non nécessaires doivent être supprimées ou anonymisées.
+        La suppression du compte ne signifie donc pas l'effacement immédiat de chaque justificatif de commande.
       </div>
 
       <h3>Informations à envoyer</h3>
